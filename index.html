@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Middlehouse</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+    /* Fade-in animation */
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .fade-in {
+        animation: fadeIn 2s ease-out forwards;
+    }
+  
+</style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Hero Section -->
+    <section class="relative w-full h-screen overflow-hidden">
+        <video class="absolute top-0 left-0 w-full h-full object-cover" autoplay loop muted>
+            <source src="./beach-top.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <div class="absolute inset-0 flex items-center justify-center text-center text-white px-6 sm:px-12">
+            <div>
+                <img id="heroImage" src="./logo-middlehouse.png" alt="Rejuvenate"
+                    class="w-32 h-32 sm:w-40 sm:h-40 mx-auto mb-6 rounded-full object-contain opacity-0">
+                <p id="typeText" class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6"></p>
+                <a id="linkExplore" href="#villas"
+                    class="opacity-0 bg-emerald-500 text-white py-3 px-8 rounded-lg text-lg font-semibold hover:bg-emerald-600 inline-block">Explore
+                    Our Villa</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Misi Kami -->
+    <section class="py-16 px-6 sm:px-12 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:items-start">
+                <div class="order-2 md:order-1">
+                    <img src="./dinner.jpg" alt="Misi Kami" class="w-full h-auto rounded-lg shadow-lg object-cover imageHeroReveal">
+                </div>
+    
+                <div class="order-1 md:order-2 md:pt-0">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-gray-800 rise-up">Our Mission</h2>
+                    <p class="text-lg text-gray-600 mb-8 rise-up-delay-1">
+                        Our mission is to provide a sanctuary in Bali, where guests can deeply connect with the island's unique spirit and
+                        culture. We are committed to crafting a stay that offers serenity, personalized care, and an authentic Balinese
+                        experience that rejuvenates the soul.
+                    </p>    
+                    <div class="relative overflow-hidden rounded-lg shadow-lg rise-up-delay-3">
+                        <div id="carouselTrack" class="flex transition-transform duration-500 ease-in-out">
+                            <div class="min-w-full">
+                                <img src="./R & R.jpg" alt="Image 1" class="w-full object-cover">
+                            </div>
+                            <div class="min-w-full">
+                                <img src="./We have 2 beautiful new addition to our family..jpg" alt="Image 2" class="w-full object-cover">
+                            </div>
+                            <div class="min-w-full">
+                                <img src="./We invite you to come mingle with our amazing guests from all around the world!.jpg" alt="Image 3" class="w-full h-auto object-cover">
+                            </div>
+                        </div>
+    
+                        <button id="prevBtn"
+                            class="absolute left-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                                </path>
+                            </svg>
+                        </button>
+                        <button id="nextBtn"
+                            class="absolute right-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </button>
+    
+                        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                            <button class="indicator w-2 h-2 rounded-full bg-white opacity-50 hover:opacity-100 transition"
+                                data-index="0"></button>
+                            <button class="indicator w-2 h-2 rounded-full bg-white opacity-50 hover:opacity-100 transition"
+                                data-index="1"></button>
+                            <button class="indicator w-2 h-2 rounded-full bg-white opacity-50 hover:opacity-100 transition"
+                                data-index="2"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Layanan Kami -->
+    <section class="bg-gray-50 py-16">
+        <div class="container mx-auto px-6">
+            <h2 id="serviceTitle" class="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-800 rise-up">Our
+                Service</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 rise-up-delay-3">
+                <!-- Service 1 -->
+                <div
+                    class="service-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 opacity-0">
+                    <div class="h-28 flex items-center justify-center bg-gray-100 overflow-hidden">
+                        <img src="./free-breafast.svg" alt="Breakfast Every Day"
+                            class="h-full w-auto object-contain hover:scale-105 transition-transform duration-300 p-4">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Breakfast Every Day</h3>
+                        <p class="text-gray-600">Provide breakfast for all guest</p>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div
+                    class="service-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 opacity-0">
+                    <div class="h-28 flex items-center justify-center bg-gray-100 overflow-hidden">
+                        <img src="./babysitting.avif" alt="Day Time Babysitting"
+                            class="h-full w-auto object-contain hover:scale-105 transition-transform duration-300 p-4">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Day Time Babysitting</h3>
+                        <p class="text-gray-600">Special treatment for each babies</p>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div
+                    class="service-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 opacity-0">
+                    <div class="h-28 flex items-center justify-center bg-gray-100 overflow-hidden">
+                        <img src="./laundry.avif" alt="Laundry Service"
+                            class="h-full w-auto object-contain hover:scale-105 transition-transform duration-300 p-4">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Laundry Service</h3>
+                        <p class="text-gray-600">Include all laundry service for all guest</p>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div
+                    class="service-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 opacity-0">
+                    <div class="h-28 flex items-center justify-center bg-gray-100 overflow-hidden">
+                        <img src="./tour-organizing.avif" alt="Tour Organizing"
+                            class="h-full w-auto object-contain hover:scale-105 transition-transform duration-300 p-4">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Tour Organizing</h3>
+                        <p class="text-gray-600">Provide all activity including outdoor activity</p>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div
+                    class="service-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 opacity-0">
+                    <div class="h-28 flex items-center justify-center bg-gray-100 overflow-hidden">
+                        <img src="./private pool.avif" alt="Private Pool"
+                            class="h-full w-auto object-contain hover:scale-105 transition-transform duration-300 p-4">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Private Pool</h3>
+                        <p class="text-gray-600">All villa already provided with private pool</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulir Pemesanan -->
+    <section class="bg-white py-16" id="booking">
+        <div class="container mx-auto text-center p-4">
+            <h2 class="text-3xl font-semibold mb-8 slide-from-right">Order Form</h2>
+            <p class="text-lg mb-6 slide-from-right-delay-1">Fill out the following form to book a villa in Bali and enjoy an unforgettable holiday.</p>
+            <form action="#" method="POST" class="w-full max-w-3xl mx-auto slide-from-right-delay-3">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label for="name" class="block text-left text-lg font-medium text-gray-700">Fullname</label>
+                        <input type="text" id="name" name="name" class="w-full p-3 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-left text-lg font-medium text-gray-700">Email</label>
+                        <input type="email" id="email" name="email" class="w-full p-3 border border-gray-300 rounded-lg" required>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
+                    <div>
+                        <label for="phone" class="block text-left text-lg font-medium text-gray-700">Phone</label>
+                        <input type="text" id="phone" name="phone" class="w-full p-3 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div>
+                        <label for="villa" class="block text-left text-lg font-medium text-gray-700">Vila</label>
+                        <select id="villa" name="villa" class="w-full p-3 border border-gray-300 rounded-lg" required>
+                            <option value="bali-pantai">Vila Bali Pantai</option>
+                            <option value="ubud-sejuk">Vila Ubud Sejuk</option>
+                            <option value="cliffside">Vila Cliffside</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <label for="dates" class="block text-left text-lg font-medium text-gray-700">Order Date</label>
+                    <input type="date" id="dates" name="dates" class="w-full p-3 border border-gray-300 rounded-lg" required>
+                </div>
+                <div class="mt-6">
+                    <button type="submit" class="bg-emerald-500 text-white py-3 px-8 rounded-lg text-lg font-semibold hover:bg-emerald-600">Book Now</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- List Vila -->
+    <section id="villas1" class="py-16">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-semibold mb-8">Our Villa</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg villa-card">
+                    <img src="./villa-1.jpg" alt="Vila Bali Pantai" class="w-full h-48 object-cover rounded-lg mb-6">
+                    <h3 class="text-xl font-semibold mb-4">Vila Sanur</h3>
+                    <p>Luxury villa with direct sea views, perfect for families and couples.</p>
+                    <a href="#" class="bg-emerald-500 text-white py-2 px-6 rounded-lg mt-4 inline-block">Details</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg villa-card">
+                    <img src="./villa-2.jpg" alt="Vila Ubud Sejuk" class="w-full h-48 object-cover rounded-lg mb-6">
+                    <h3 class="text-xl font-semibold mb-4">Vila Ubud</h3>
+                    <p>The villa, surrounded by tropical forests, offers tranquility and peace.</p>
+                    <a href="#" class="bg-emerald-500 text-white py-2 px-6 rounded-lg mt-4 inline-block">Details</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg villa-card">
+                    <img src="./villa-3.jpg" alt="Vila Cliffside" class="w-full h-48 object-cover rounded-lg mb-6">
+                    <h3 class="text-xl font-semibold mb-4">Vila Buleleng</h3>
+                    <p>Cliffside villa with spectacular views, perfect for a romantic getaway.</p>
+                    <a href="#" class="bg-emerald-500 text-white py-2 px-6 rounded-lg mt-4 inline-block">Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+
+    <!-- Testimoni -->
+    <section class="bg-gray-50 py-16">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-semibold mb-8">Apa Kata Tamu Kami?</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg testimonial-card">
+                    <div class="flex justify-center mb-4">
+                        <!-- Bintang Rating -->
+                        <span class="text-yellow-500 text-xl">&#9733;</span>
+                        <span class="text-yellow-500 text-xl">&#9733;</span>
+                        <span class="text-yellow-500 text-xl">&#9733;</span>
+                        <span class="text-yellow-500 text-xl">&#9733;</span>
+                        <span class="text-gray-300 text-xl">&#9733;</span>
+                    </div>
+                    <!-- Dummy Photo -->
+                    <img src="https://via.placeholder.com/50" alt="Avatar" class="rounded-full mx-auto mb-4">
+                    <p class="text-lg mb-4">"Pengalaman menginap yang luar biasa! Vila sangat nyaman dan layanan yang sangat
+                        profesional. Kami pasti akan kembali!"</p>
+                    <h4 class="text-xl font-semibold">- Sarah & John</h4>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg testimonial-card">
+                    <div class="flex justify-center mb-4">
+                        <!-- Bintang Rating -->
+                        <span class="text-yellow-500 text-xl">&#9733;</span>
+                        <span class="text-yellow-500 text-xl">&#9733;</span>
+                        <span class="text-yellow-500 text-xl">&#9733;</span>
+                        <span class="text-yellow-500 text-xl">&#9733;</span>
+                        <span class="text-gray-300 text-xl">&#9733;</span>
+                    </div>
+                    <!-- Dummy Photo -->
+                    <img src="https://via.placeholder.com/50" alt="Avatar" class="rounded-full mx-auto mb-4">
+                    <p class="text-lg mb-4">"Vila yang kami sewa di Bali benar-benar memuaskan. Pemandangannya luar biasa
+                        dan sangat cocok untuk relaksasi."</p>
+                    <h4 class="text-xl font-semibold">- Michael & Lisa</h4>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg testimonial-card">
+                    <div class="flex justify-center mb-4">
+                        <!-- Bintang Rating -->
+                        <span class="text-yellow-500 text-xl">&#9733;</span>
+                        <span class="text-yellow-500 text-xl">&#9733;</span>
+                        <span class="text-yellow-500 text-xl">&#9733;</span>
+                        <span class="text-gray-300 text-xl">&#9733;</span>
+                        <span class="text-gray-300 text-xl">&#9733;</span>
+                    </div>
+                    <!-- Dummy Photo -->
+                    <img src="https://via.placeholder.com/50" alt="Avatar" class="rounded-full mx-auto mb-4">
+                    <p class="text-lg mb-4">"Layanan transportasi dan pengaturan acara di vila sangat memudahkan kami.
+                        Terima kasih atas pengalaman yang luar biasa!"</p>
+                    <h4 class="text-xl font-semibold">- David & Emma</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12">
+        <div class="container mx-auto text-center sm:text-left">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-12">
+                <!-- Section 1: Logo and Description -->
+                <div>
+                    <img src="./logo-middlehouse.png" alt="Logo" class="h-24 mb-4 mx-auto sm:mx-0">
+                    <p class="text-lg">Experience the best villas and premium services for your perfect getaway. Discover
+                        our villas in Bali for a memorable stay.</p>
+                </div>
+    
+                <!-- Section 2: Quick Links -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-emerald-500">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-emerald-500">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-emerald-500">Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-emerald-500">Contact</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Section 3: Social Media and Contact -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Connect with Us</h3>
+                    <ul class="flex justify-center space-x-6">
+                        <li><a href="#" class="text-gray-400 hover:text-emerald-500"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-emerald-500"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-emerald-500"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-emerald-500"><i class="fab fa-linkedin-in"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-600 pt-8">
+                <p class="text-sm text-gray-400">&copy; 2025 Your Company Name. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+<!-- Add Font Awesome for icons -->
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/TextPlugin.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<style>
+    /* Hover Effect for Villa Cards */
+    .villa-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .villa-card:hover {
+        transform: scale(1.05);  /* Slight zoom-in effect */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);  /* Increase shadow on hover */
+    }
+
+     /* Hover Effect for Testimonial Cards */
+    .testimonial-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+        transform: scale(1.05);  /* Slight zoom-in effect */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);  /* Increase shadow on hover */
+    }
+
+    .imageHeroReveal {
+      animation: imageHeroReveal both;
+      animation-timeline: view(70% 20%) ;           
+    }
+
+    @keyframes imageHeroReveal {
+        from {
+            filter: saturate(0) contrast(4) brightness(.1) blur(5px);
+            opacity: 0;
+            scale: .95;
+            translate: 0 6rem;            
+        }
+
+        to{
+            filter: none;
+            opacity: 1;
+            scale: 1;
+            translate: 0 0;
+        }
+    }
+
+    .rise-up {
+        animation: riseUp both;
+        animation-timeline: view(10% 5%);
+    }
+
+    @keyframes riseUp {
+        from {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Variasi Rise Up dengan delay untuk elemen bergantian */
+    .rise-up-delay-1 {
+        animation: riseUp both;
+        animation-timeline: view(10% 5%);
+        animation-delay: 1s;
+    }
+
+    .rise-up-delay-2 {
+        animation: riseUp both;
+        animation-timeline: view(80% 10%);
+        animation-delay: 2s;
+    }
+
+    .rise-up-delay-3 {
+        animation: riseUp both;
+        animation-timeline: view(80% 10%);
+        animation-delay: 3s;
+    }
+
+    .slide-from-right {
+        animation: slideFromRight both;
+        animation-timeline: view(80% 10%);
+    }
+
+    @keyframes slideFromRight {
+        from {
+            opacity: 0;
+            transform: translateX(80px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    /* Variasi Slide from Right dengan delay */
+    .slide-from-right-delay-1 {
+        animation: slideFromRight both;
+        animation-timeline: view(80% 10%);
+        animation-delay: 3s;
+    }
+
+    .slide-from-right-delay-2 {
+        animation: slideFromRight both;
+        animation-timeline: view(80% 10%);
+        animation-delay: 6s;
+    }
+
+    .slide-from-right-delay-3 {
+        animation: slideFromRight both;
+        animation-timeline: view(80% 10%);
+        animation-delay: 7s;
+    }
+</style>
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Fade in animation untuk image
+    gsap.to("#heroImage", {
+        opacity: 1,
+        duration: 1.5,
+        ease: "power2.out",
+        delay: 0.3
+    });
+
+     gsap.to("#typeText", {
+        duration: 2,
+        text: "Rejuvenate Soul",
+        ease: "none",
+        delay: 1
+    });
+
+    gsap.to("#linkExplore", {
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        delay: 3.5 // 1 (delay typing) + 2 (durasi typing) + 0.5 (jeda tambahan)
+    });
+
+    // Animate service cards with stagger effect
+    gsap.to(".service-card", {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".service-card",
+            start: "top 85%",
+            toggleActions: "play none none none"
+        }
+    });
+
+
+    // GSAP Fade-In Effect for Section
+    gsap.from(".villa-card", {
+        opacity: 0,
+        duration: 1,
+        ease: "power2.out",
+        stagger: 0.2
+    });
+
+    // GSAP Fade-In Effect for Testimonial Section
+    gsap.from(".testimonial-card", {
+        opacity: 0,
+        duration: 1,
+        ease: "power2.out",
+        stagger: 0.2
+    });
+
+    // Animation for the heading with Fade-In
+    gsap.from("h2", {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        ease: "power2.out"
+    });
+
+    
+
+        
+
+    const track = document.getElementById('carouselTrack');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const indicators = document.querySelectorAll('.indicator');
+    
+    let currentIndex = 0;
+    const totalSlides = 3;
+
+    function updateCarousel() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        
+        // Update indicators
+        indicators.forEach((indicator, index) => {
+            if (index === currentIndex) {
+                indicator.classList.remove('opacity-50');
+                indicator.classList.add('opacity-100');
+            } else {
+                indicator.classList.remove('opacity-100');
+                indicator.classList.add('opacity-50');
+            }
+        });
+    }
+
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateCarousel();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateCarousel();
+    });
+
+    indicators.forEach(indicator => {
+        indicator.addEventListener('click', (e) => {
+            currentIndex = parseInt(e.target.dataset.index);
+            updateCarousel();
+        });
+    });
+
+    // Auto slide every 5 seconds
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateCarousel();
+    }, 5000);
+
+    // Initialize
+    updateCarousel();
+</script>
+</html>
